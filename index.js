@@ -20,19 +20,19 @@ const askQuestion = (question) => {
   console.log("Se não tiver feito alguma prova coloque a nota 0")
   console.log("")
   console.log("Primeiro semestre")
+  const gs1 = await askQuestion('Nota gs: ');
   let cp1 = await askQuestion('Cp1: ');
   cp1 += await askQuestion('Cp2: ');
   cp1 += await askQuestion('Sprint1: ');
   cp1 += await askQuestion('Sprint2: ');
-  const gs1 = await askQuestion('Nota gs: ');
   const primeiroSem = (((cp1 / 4) * 10) * 0.4) + (gs1 * 0.6)
   console.log("")
   console.log("Segundo semestre")
-  let cp2 = await askQuestion('Cp3: ');
-  cp2 += await askQuestion('Cp4: ');
-  cp2 += await askQuestion('Sprint3: ');
-  cp2 += await askQuestion('Sprint4: ');
   const gs2 = await askQuestion('Nota gs: ');
+  let cp2 = await askQuestion('Cp1: ');
+  cp2 += await askQuestion('Cp2: ');
+  cp2 += await askQuestion('Sprint1: ');
+  cp2 += await askQuestion('Sprint2: ');
   const segundoSem = (((cp2 / 4) * 10) * 0.4) + (gs2 * 0.6)
   console.log("")
   const mediaFinal = (primeiroSem * 0.4) + (segundoSem * 0.6)
